@@ -28,6 +28,7 @@ class NoteItem extends StatelessWidget {
                 "Bulid your Career with Tharwat Samy",
                 style: TextStyle(
                   color: Colors.black.withOpacity(.6),
+                  fontSize: 18,
                 ),
               ),
             ),
