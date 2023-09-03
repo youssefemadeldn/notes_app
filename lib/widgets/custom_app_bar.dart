@@ -2,23 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:noteapp/widgets/custom_icon.dart';
 
 class CustomeAppBar extends StatelessWidget {
-  const CustomeAppBar({super.key});
-
+  const CustomeAppBar({super.key, required this.titel, required this.icon});
+  final String titel;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(right: 10.0, left: 10.0),
+    return Padding(
+      padding: const EdgeInsets.only(right: 10.0, left: 10.0),
       child: Row(
         children: [
           Text(
-            'Notes',
-            style: TextStyle(
+            titel,
+            style: const TextStyle(
               fontSize: 28,
               fontWeight: FontWeight.bold,
             ),
           ),
           Spacer(),
-          CustomSearchIcon(),
+          CustomIcon(icon: icon),
         ],
       ),
     );
