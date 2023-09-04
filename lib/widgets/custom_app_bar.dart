@@ -18,7 +18,7 @@ class CustomeAppBar extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           CustomIcon(icon: icon),
         ],
       ),
