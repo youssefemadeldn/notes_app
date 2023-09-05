@@ -18,12 +18,14 @@ class NotesListViwe extends StatelessWidget {
           child: ListView.builder(
               itemCount: notes.length,
               itemBuilder: (context, index) {
-                return const Padding(
+                return Padding(
                   padding: EdgeInsets.zero,
                   child: Column(
                     children: [
-                      NoteItem(),
-                      SizedBox(
+                      NoteItem(
+                        note: notes[index],
+                      ),
+                      const SizedBox(
                         height: 10,
                       )
                     ],
